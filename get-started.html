@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started — Case Intake | Invictus Life Care Planning</title>
+  <meta name="description" content="Submit your case online for a conflict check and consultation. Life care plans, medical cost projections, and expert witness services for catastrophic injury and illness.">
+  <link rel="canonical" href="https://invictuslifecare.com/get-started.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://invictuslifecare.com/get-started.html">
+  <meta property="og:site_name" content="Invictus Life Care Planning">
+  <meta property="og:title" content="Get Started — Invictus Life Care Planning">
+  <meta property="og:description" content="Submit your case online for a conflict check and consultation.">
+  <meta property="og:image" content="https://invictuslifecare.com/images/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e2f56'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia' font-size='26' fill='%238fe3f2'%3EIL%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="none" stroke="#2cc5dd" stroke-width="1.6"/>
+        <circle cx="32" cy="32" r="25.5" fill="none" stroke="#2cc5dd" stroke-width="0.7" opacity="0.55"/>
+        <text x="32" y="37" text-anchor="middle" font-family="Georgia, serif" font-size="17" letter-spacing="1" fill="#ffffff">ILC</text>
+        <path d="M15 46 h9 l3 -7 5 12 4 -9 2 4 h11" fill="none" stroke="#2cc5dd" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Invictus Life Care Planning
+        <small>Restoring Quality of Life</small>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" onclick="toggleNav()">Menu &#9776;</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html#about">About</a>
+      <a href="get-started.html">Get Started</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="nav-cta" href="index.html#contact">Request a Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Getting Started</h1>
+      <p>Submit your case information below. That opens the conflict check, opens your file, and
+         schedules the consultation that begins the life care planning process.</p>
+    </div>
+  </section>
+
+  <!-- ============ ONLINE CASE INTAKE ============ -->
+  <section class="section" id="intake">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Online Case Intake</p>
+        <h2>Open your case with a conflict check</h2>
+        <p>Everything needed to check for conflicts, open the file, and schedule your consultation.
+           You&rsquo;ll typically hear back the same business day.</p>
+      </div>
+
+      <form id="intake-form" class="contact-form" method="POST" action="https://formspree.io/f/meebyvre">
+        <input type="hidden" name="_subject" value="New case intake — Invictus Life Care Planning">
+        <input type="hidden" name="site" value="Invictus Life Care Planning">
+        <input type="hidden" name="form_type" value="Case intake">
+        <div>
+          <label for="in-name">Your name *</label>
+          <input type="text" id="in-name" name="name" required autocomplete="name">
+        </div>
+        <div>
+          <label for="in-firm">Firm / organization</label>
+          <input type="text" id="in-firm" name="firm" autocomplete="organization">
+        </div>
+        <div>
+          <label for="in-email">Email *</label>
+          <input type="email" id="in-email" name="email" required autocomplete="email">
+        </div>
+        <div>
+          <label for="in-phone">Phone</label>
+          <input type="tel" id="in-phone" name="phone" autocomplete="tel">
+        </div>
+        <div>
+          <label for="in-side">You represent</label>
+          <select id="in-side" name="representing">
+            <option value="">Select one</option>
+            <option>Plaintiff</option>
+            <option>Defendant</option>
+            <option>Other / not applicable</option>
+          </select>
+        </div>
+        <div>
+          <label for="in-service">Service needed</label>
+          <select id="in-service" name="service">
+            <option value="">Select one</option>
+            <option>Life care plan</option>
+            <option>Medical cost projection</option>
+            <option>Expert witness / testimony</option>
+            <option>Medical record chronology</option>
+            <option>Medical billing dispute</option>
+            <option>Other / not sure</option>
+          </select>
+        </div>
+        <div class="field-full">
+          <label for="in-style">Case style &mdash; e.g., Smith v. Jones *</label>
+          <input type="text" id="in-style" name="case_style" required>
+        </div>
+        <div>
+          <label for="in-number">Case number</label>
+          <input type="text" id="in-number" name="case_number">
+        </div>
+        <div>
+          <label for="in-court">Court / jurisdiction</label>
+          <input type="text" id="in-court" name="court">
+        </div>
+        <div>
+          <label for="in-opposing">Opposing counsel &amp; firm</label>
+          <input type="text" id="in-opposing" name="opposing_counsel">
+        </div>
+        <div>
+          <label for="in-evaluee">Individual to be evaluated</label>
+          <input type="text" id="in-evaluee" name="individual">
+        </div>
+        <div>
+          <label for="in-deadline">Trial date / key deadline</label>
+          <input type="text" id="in-deadline" name="deadline">
+        </div>
+        <div>
+          <label for="in-reach">Best way to reach you</label>
+          <select id="in-reach" name="preferred_contact">
+            <option value="">Select one</option>
+            <option>Call</option>
+            <option>Text</option>
+            <option>Email</option>
+          </select>
+        </div>
+        <div class="field-full">
+          <label for="in-notes">Anything else (optional)</label>
+          <textarea id="in-notes" name="message" placeholder="Injury type, records available, timeline."></textarea>
+        </div>
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field-full">
+          <button class="btn btn-accent" type="submit">Submit Case Information</button>
+        </div>
+        <p class="form-note">
+          Submitting this form opens a conflict check and consultation request &mdash; it is not an
+          engagement. Engagement terms are confirmed separately once conflicts are cleared. This
+          form is not a confidential channel &mdash; please do not include medical records or
+          confidential case details.
+        </p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Invictus Life Care Planning</h4>
+        <p style="font-size:0.93rem; max-width:44ch;">
+          Christiane Pittaluga, BSN, RN, JD, CLCP &mdash; Certified Life Care Planner. Life care plans,
+          medical cost projections, and expert witness services for catastrophic injury and illness.
+          Serving clients nationwide.
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="get-started.html">Get Started</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15613058877">(561) 305-8877</a></li>
+          <li><a href="sms:+15613058877">Text (561) 305-8877</a></li>
+          <li><a href="mailto:chris@chrispittaluga.com">chris@chrispittaluga.com</a></li>
+          <li>Mon&ndash;Fri, 9am&ndash;4pm ET</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-disclaimer">
+      &copy; 2026 Invictus Life Care Planning. Life care plans, cost projections, and related
+      services are provided for litigation support and planning purposes. Nothing on this site
+      constitutes legal, medical, or nursing advice, and no attorney-client or nurse-patient
+      relationship is created by visiting this site or submitting an inquiry.
+    </p>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    var nav = document.getElementById('site-nav');
+    var btn = document.querySelector('.nav-toggle');
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+</script>
+
+</body>
+</html>

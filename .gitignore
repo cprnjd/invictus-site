@@ -1,0 +1,7 @@
+# Windows / OneDrive noise
+desktop.ini
+Thumbs.db
+~$*
+
+# Machine-local Claude Code settings
+.claude/settings.local.json
