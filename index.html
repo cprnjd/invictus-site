@@ -87,7 +87,6 @@
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" onclick="toggleNav()">Menu &#9776;</button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="#about">About</a>
-      <a href="get-started.html">Get Started</a>
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="#contact">Request a Consultation</a>
     </nav>
@@ -225,75 +224,6 @@
         </div>
       </div>
 
-      <div class="section-head" id="leave-info" style="margin-top:64px;">
-        <p class="kicker">Or Leave Your Information</p>
-        <h2>Prefer a call back? Leave your contact info.</h2>
-        <p>Share how to reach you and a little about your case, and you&rsquo;ll hear back the same
-           business day.</p>
-      </div>
-
-      <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/meebyvre">
-        <input type="hidden" name="_subject" value="Website contact — Invictus Life Care Planning">
-        <input type="hidden" name="site" value="Invictus Life Care Planning">
-        <div>
-          <label for="cf-name">Full name *</label>
-          <input type="text" id="cf-name" name="name" required autocomplete="name">
-        </div>
-        <div>
-          <label for="cf-email">Email *</label>
-          <input type="email" id="cf-email" name="email" required autocomplete="email">
-        </div>
-        <div>
-          <label for="cf-phone">Phone</label>
-          <input type="tel" id="cf-phone" name="phone" autocomplete="tel">
-        </div>
-        <div>
-          <label for="cf-role">I am&hellip;</label>
-          <select id="cf-role" name="role">
-            <option value="">Select one</option>
-            <option>Attorney &mdash; plaintiff</option>
-            <option>Attorney &mdash; defense</option>
-            <option>Insurance adjuster</option>
-            <option>Individual / family member</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div>
-          <label for="cf-service">Service needed</label>
-          <select id="cf-service" name="service">
-            <option value="">Select one</option>
-            <option>Life care plan</option>
-            <option>Medical cost projection</option>
-            <option>Expert witness / testimony</option>
-            <option>Medical record chronology</option>
-            <option>Medical billing dispute</option>
-            <option>Disability application</option>
-            <option>Other / not sure</option>
-          </select>
-        </div>
-        <div>
-          <label for="cf-reach">Best way to reach you</label>
-          <select id="cf-reach" name="preferred_contact">
-            <option value="">Select one</option>
-            <option>Call</option>
-            <option>Text</option>
-            <option>Email</option>
-          </select>
-        </div>
-        <div class="field-full">
-          <label for="cf-message">Message (optional)</label>
-          <textarea id="cf-message" name="message" placeholder="Type of injury, case timeline, records available, or anything else helpful. Please do not include confidential medical details in this form."></textarea>
-        </div>
-        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field-full">
-          <button class="btn btn-accent" type="submit">Send My Information</button>
-        </div>
-        <p class="form-note">
-          Submitting this form does not create an engagement, and this form is not a confidential
-          channel &mdash; please save medical records and case specifics for a secure exchange after
-          engagement.
-        </p>
-      </form>
     </div>
   </section>
 
@@ -313,7 +243,6 @@
       <div>
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="get-started.html">Get Started</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </div>
@@ -343,39 +272,6 @@
     var open = nav.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
-
-  // Contact form: if a real form endpoint is configured, POST to it normally.
-  // Otherwise fall back to opening the visitor's email app, pre-filled.
-  function buildContactMailto(form) {
-    function val(name) {
-      var el = form.elements[name];
-      return (el && el.value) ? el.value : '(not provided)';
-    }
-    var body = [
-      'New contact from the Invictus Life Care Planning website:',
-      '',
-      'Name: ' + val('name'),
-      'Email: ' + val('email'),
-      'Phone: ' + val('phone'),
-      'Role: ' + val('role'),
-      'Service needed: ' + val('service'),
-      'Best way to reach: ' + val('preferred_contact'),
-      '',
-      'Message:',
-      val('message')
-    ].join('\n');
-    return 'mailto:chris@chrispittaluga.com' +
-      '?subject=' + encodeURIComponent('Website contact — Invictus Life Care Planning') +
-      '&body=' + encodeURIComponent(body);
-  }
-
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
-    var form = e.target;
-    if (form.getAttribute('action').indexOf('YOUR-FORM-ID') !== -1) {
-      e.preventDefault();
-      window.location.href = buildContactMailto(form);
-    }
-  });
 </script>
 
 </body>

@@ -1,6 +1,6 @@
 # Invictus Life Care Planning — Website
 
-A complete replacement for invictuslifecare.com. Two pages, no build step, no
+A complete replacement for invictuslifecare.com. A single page, no build step, no
 dependencies — plain HTML and CSS that can be uploaded to any web host.
 
 Design: matches the Invictus Mediation site (same layout, typography, and page
@@ -12,12 +12,11 @@ turquoise gradients (#0e2f56 → #107a94), light blue (#8fe3f2) and turquoise
 
 | File | Purpose |
 |---|---|
-| `index.html` | Home — hero, about/credentials, contact cards + contact form |
-| `get-started.html` | Getting started — online case intake form (conflict check + consultation) |
+| `index.html` | Home — hero, about/credentials, contact cards |
 | `css/styles.css` | Shared stylesheet (all colors defined at the top in `:root`) |
 
 There is intentionally **no calendar/scheduling page** — engagement starts by
-phone, text, email, or the contact form.
+phone, text, or email.
 
 ## Key facts baked into the site
 
@@ -25,17 +24,6 @@ phone, text, email, or the contact form.
   directly; nothing on the site quotes a rate or retainer.
 - **Phone:** (561) 305-8877 · **Email:** chris@chrispittaluga.com
 - **Mail:** PO Box 6143, Delray Beach, FL 33482 · **Hours:** Mon–Fri 9am–4pm ET
-
-## Contact form
-
-The form posts to the same Formspree endpoint as the Invictus Mediation site
-(`https://formspree.io/f/meebyvre`). Submissions from this site arrive with the
-subject **"Website contact — Invictus Life Care Planning"** and a hidden `site`
-field, so you can tell the two sites' messages apart.
-
-If you'd rather have a separate inbox/form: create a new form at
-[formspree.io](https://formspree.io), then replace the `action` URL in
-`index.html` with the new endpoint.
 
 ## Adding your photo
 
@@ -54,8 +42,8 @@ The current site is hosted at **invictuslifecare.com**. Options:
    and drag this whole folder onto the page. Then connect the
    `invictuslifecare.com` domain in Netlify's domain settings and update DNS
    at your registrar.
-3. **Any web host:** Upload the folder contents (index.html,
-   get-started.html, css/) to the web root via the host's file manager or FTP.
+3. **Any web host:** Upload the folder contents (index.html, css/, and the
+   redirect stubs) to the web root via the host's file manager or FTP.
 
 ## Editing
 
